@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Economy Learning - Latihan Soal Pelaku Ekonomi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HALAMAN 1: BERANDA ===== -->
+  <section id="beranda" class="layar aktif">
+    <div class="wadah">
+      <div class="hero">
+        <h1>ECONOMY LEARNING</h1>
+        <p class="sub">Latihan Soal Pelaku Ekonomi</p>
+        <p>Berlatih dulu sebelum ulangan harian. Kerjakan soal, lihat nilaimu, dan pahami pembahasannya.</p>
+      </div>
+      <div class="kartu">
+        <div class="info-grid">
+          <div class="info"><b>Mata Pelajaran</b>Ekonomi</div>
+          <div class="info"><b>Sasaran</b>Siswa SMA Kelas X</div>
+          <div class="info"><b>Materi Latihan</b>Pelaku Ekonomi Dua Sektor dan Empat Sektor</div>
+        </div>
+        <div style="text-align:center">
+          <button id="tombolMulaiLatihan" class="tombol kuning besar">Mulai Latihan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HALAMAN 2: IDENTITAS SISWA ===== -->
+  <section id="identitas" class="layar">
+    <div class="wadah">
+      <div class="kartu">
+        <h2>Identitas Siswa</h2>
+        <p>Isi data dirimu dulu sebelum mengerjakan soal.</p>
+        <form id="formIdentitas" autocomplete="off">
+          <label for="inputNama">Nama Lengkap</label>
+          <input type="text" id="inputNama" placeholder="Contoh: Budi Santoso">
+
+          <label for="inputKelas">Kelas</label>
+          <input type="text" id="inputKelas" placeholder="Contoh: X-3">
+
+          <label for="inputAbsen">Nomor Absen</label>
+          <input type="number" id="inputAbsen" placeholder="Contoh: 12" min="1">
+
+          <div id="galatIdentitas" class="galat"></div>
+          <button type="submit" class="tombol besar" style="margin-top:8px">Mulai Mengerjakan</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HALAMAN 3: LATIHAN SOAL ===== -->
+  <section id="latihan" class="layar">
+    <div class="wadah">
+      <div class="progres-teks">
+        <span id="teksProgres"></span>
+        <span id="namaDiLatihan"></span>
+      </div>
+      <div class="bar"><div id="barIsi" class="bar-isi"></div></div>
+
+      <div class="kartu">
+        <div id="nomorSoal" class="nomor-soal"></div>
+        <div id="teksSoal" class="teks-soal"></div>
+        <div id="daftarPilihan"></div>
+
+        <div class="navigasi">
+          <button id="tombolSebelumnya" class="tombol garis">&laquo; Sebelumnya</button>
+          <button id="tombolSelanjutnya" class="tombol">Selanjutnya &raquo;</button>
+          <button id="tombolSelesai" class="tombol kuning" style="display:none">Selesaikan Latihan</button>
+        </div>
+        <div id="peringatan" class="galat"></div>
+      </div>
+
+      <div class="kartu">
+        <b>Loncat ke soal:</b>
+        <div id="petaSoal" class="peta"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HALAMAN 4: HASIL LATIHAN ===== -->
+  <section id="hasil" class="layar">
+    <div class="wadah">
+      <div class="kartu">
+        <h2 style="text-align:center">Hasil Latihan</h2>
+        <div id="nilaiAkhir" class="nilai-besar"></div>
+        <div class="nilai-label">Nilai Akhir (skala 0-100)</div>
+
+        <div class="ringkas">
+          <div><b id="hasilTotal"></b>Total Soal</div>
+          <div><b id="hasilBenar"></b>Benar</div>
+          <div><b id="hasilSalah"></b>Salah</div>
+        </div>
+
+        <div class="identitas-hasil">
+          <p><b>Nama:</b> <span id="hasilNama"></span></p>
+          <p><b>Kelas:</b> <span id="hasilKelas"></span> &nbsp;|&nbsp; <b>No. Absen:</b> <span id="hasilAbsen"></span></p>
+        </div>
+
+        <div id="statusKirim" class="status-kirim"></div>
+
+        <div class="aksi">
+          <button id="tombolLihatPembahasan" class="tombol">Lihat Pembahasan</button>
+          <button id="tombolKerjakanKembali" class="tombol garis">Kerjakan Kembali</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HALAMAN 5: PEMBAHASAN ===== -->
+  <section id="pembahasan" class="layar">
+    <div class="wadah">
+      <h2>Pembahasan Soal</h2>
+      <div id="daftarPembahasan"></div>
+      <div class="aksi">
+        <button id="tombolKembaliHasil" class="tombol garis">&laquo; Kembali ke Hasil</button>
+        <button id="tombolKerjakanKembali2" class="tombol">Kerjakan Kembali</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Urutan ini penting: soal.js dulu, baru script.js -->
+  <script src="soal.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
